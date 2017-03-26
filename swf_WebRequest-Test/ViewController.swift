@@ -27,7 +27,12 @@ class ViewController: UIViewController {
                     do {
                         let jsonData = try JSONSerialization.jsonObject(with: responseData, options: JSONSerialization.ReadingOptions.allowFragments)
                         
-                        self.textViewJson.text = "\(jsonData)"
+                        print(jsonData)
+                        let rawString = String(describing: jsonData)
+                        
+                        DispatchQueue.main.async {
+                            self.textViewJson.text = rawString
+                        }
                         
                     } catch {
                         self.textViewJson.text = "Error: Could not serialize"
