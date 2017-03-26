@@ -9,16 +9,35 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet weak var textViewJson: UITextView!
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        let urlString = "http://swapi.co/api/people/1"
+        let session = URLSession.shared
+        let url = URL(string: urlString)
+        
+        if let url = url {
+            session.dataTask(with: url, completionHandler: { (data: Data?, response: URLResponse?, error: Error?) in
+                
+                if let responseData = data {
+                    
+                    do {
+                        let jsonData = try JSONSerialization.jsonObject(with: responseData, options: JSONSerialization.ReadingOptions.allowFragments)
+                        
+                        self.textViewJson.text = "\(jsonData)"
+                        
+                    } catch {
+                        self.textViewJson.text = "Error: Could not serialize"
+                    }
+                }
+                
+            }).resume()
+        }
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
 
 
 }
