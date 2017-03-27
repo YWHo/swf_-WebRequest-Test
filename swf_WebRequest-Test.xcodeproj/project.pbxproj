@@ -12,6 +12,7 @@
 		5EA2E2551E87E4F400C97184 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EA2E2531E87E4F400C97184 /* Main.storyboard */; };
 		5EA2E2571E87E4F400C97184 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EA2E2561E87E4F400C97184 /* Assets.xcassets */; };
 		5EA2E25A1E87E4F400C97184 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EA2E2581E87E4F400C97184 /* LaunchScreen.storyboard */; };
+		5EA2E2631E89055B00C97184 /* SWPerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA2E2621E89055B00C97184 /* SWPerson.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		5EA2E2561E87E4F400C97184 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5EA2E2591E87E4F400C97184 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5EA2E25B1E87E4F400C97184 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5EA2E2621E89055B00C97184 /* SWPerson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWPerson.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,11 +59,20 @@
 				5EA2E24F1E87E4F400C97184 /* AppDelegate.swift */,
 				5EA2E2511E87E4F400C97184 /* ViewController.swift */,
 				5EA2E2531E87E4F400C97184 /* Main.storyboard */,
+				5EA2E2611E89054200C97184 /* Model */,
 				5EA2E2561E87E4F400C97184 /* Assets.xcassets */,
 				5EA2E2581E87E4F400C97184 /* LaunchScreen.storyboard */,
 				5EA2E25B1E87E4F400C97184 /* Info.plist */,
 			);
 			path = "swf_WebRequest-Test";
+			sourceTree = "<group>";
+		};
+		5EA2E2611E89054200C97184 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5EA2E2621E89055B00C97184 /* SWPerson.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +150,7 @@
 			files = (
 				5EA2E2521E87E4F400C97184 /* ViewController.swift in Sources */,
 				5EA2E2501E87E4F400C97184 /* AppDelegate.swift in Sources */,
+				5EA2E2631E89055B00C97184 /* SWPerson.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
